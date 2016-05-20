@@ -179,9 +179,38 @@ vmap ,. :w !pbcopy<CR><CR>
 nmap ,. :r !pbpaste<CR>
 imap ,. <ESC>:r !pbpaste<CR>A
 
+" tab switch
+noremap <leader>1 1gt
+noremap <leader>2 2gt
+noremap <leader>3 3gt
+noremap <leader>4 4gt
+noremap <leader>5 5gt
+noremap <leader>6 6gt
+noremap <leader>7 7gt
+noremap <leader>8 8gt
+noremap <leader>9 9gt
+noremap <leader>0 :tablast<CR>
+noremap <leader>q :tabprevious<CR>
+noremap <leader>w :tabnext<CR>
+
+" move in split view
+nnoremap <leader>h <C-w>h
+nnoremap <leader>j <C-w>j
+nnoremap <leader>k <C-w>k
+nnoremap <leader>l <C-w>l
+nnoremap <leader>H <C-w>H
+nnoremap <leader>J <C-w>J
+nnoremap <leader>K <C-w>K
+nnoremap <leader>L <C-w>L
+nnoremap <leader><space>h <C-w>H<C-w>l
+nnoremap <leader><space>j <C-w>J<C-w>k
+nnoremap <leader><space>k <C-w>K<C-w>j
+nnoremap <leader><space>l <C-w>L<C-w>h
 
 map <F4> <Esc>:%!python -m json.tool<CR>
 imap <F4> <Esc>:%!python -m json.tool<CR>
+
+map K <Nop>
 
 hi TabLineSel ctermfg=Red
 
@@ -209,6 +238,7 @@ Bundle "tpope/vim-eunuch"
 Bundle "evanmiller/nginx-vim-syntax"
 Bundle "zenorocha/dracula-theme"
 Bundle "vim-scripts/JavaScript-syntax"
+Bundle "digitaltoad/vim-pug"
 
 "设置NerdTree
 map <F3> :NERDTreeMirror<CR>
@@ -224,6 +254,7 @@ let g:php_cs_fixer_dry_run = 0
 let g:php_cs_fixer_verbose = 1
 let g:javascript_enable_domhtmlcss = 1
 let g:jsx_ext_require = 0
+let g:multi_cursor_exit_from_insert_mode = 0
 
 "syntastic
 execute pathogen#infect()
@@ -232,6 +263,8 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 set backspace=2
 let g:syntastic_javascript_checkers = ["eslint"]
+"let g:syntastic_javascript_checkers = [""]
+let g:syntastic_html_checkers = [""]
 let g:syntastic_php_checkers = [""]
 let g:syntastic_javascript_eslint_exec = "eslint"
 
