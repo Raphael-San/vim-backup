@@ -2,7 +2,7 @@
 
 > Write JavaScript ES6 easily with vim.
 
-![](https://raw.githubusercontent.com/isRuslan/vim-es6/master/sample.gif)
+![](https://giant.gfycat.com/FluidFrailAmethystgemclam.gif)
 
 ## Install
 
@@ -37,3 +37,4 @@ To checkout the source from repository:
 | `class→` | `class name { constructor () { ...} }` |
 | `forof→` | `for (let value of arr) { ... }` |
 | `im→`    | `import lib from 'Library'` |
+| `ex→`    | `export default foo` |

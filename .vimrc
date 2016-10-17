@@ -1,7 +1,6 @@
 "my modifition
 "Set mapleader
 let mapleader = ","
-let g:solarized_termcolors=256
 
 "Fast reloading of the .vimrc
 map <silent> <leader>ss :source /Users/yedeying/.vimrc<cr>
@@ -12,6 +11,11 @@ map <silent> <leader>dd :!cp /Users/yedeying/.vimrc /root/.vimrc
 "When .vimrc is edited, reload it
 autocmd! bufwritepost .vimrc source /Users/yedeying/.vimrc
 
+"undo持久化
+if has('persistent_undo') "check if your vim version supports it
+    set undofile "turn on the feature
+    set undodir=$HOME/.vim/undo "directory where the undo files will be stored
+endif
 
 "设置编码
 set encoding=utf-8
@@ -216,29 +220,33 @@ hi TabLineSel ctermfg=Red
 
 "设置bundle
 filetype off
-set rtp+=~/.vim/bundle/vundle
-call vundle#rc()
-Bundle 'gmarik/vundle'
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
 
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'mattn/emmet-vim'
+Plugin 'Shougo/neocomplcache'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'editorconfig/editorconfig-vim'
+Plugin 'stephpy/vim-php-cs-fixer'
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
+Plugin 'isRuslan/vim-es6'
+Plugin 'othree/yajs.vim'
+"Plugin 'scrooloose/syntastic'
+Plugin 'tpope/vim-eunuch'
+Plugin 'evanmiller/nginx-vim-syntax'
+Plugin 'zenorocha/dracula-theme'
+Plugin 'vim-scripts/JavaScript-syntax'
+Plugin 'digitaltoad/vim-pug'
+Plugin 'vim-scripts/AnsiEsc.vim'
+Plugin 'hushicai/fecs.vim.git'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
+
+call vundle#end()
 filetype indent plugin on
-
-Bundle "scrooloose/nerdtree"
-Bundle "scrooloose/nerdcommenter"
-Bundle "mattn/emmet-vim"
-Bundle "Shougo/neocomplcache"
-Bundle "terryma/vim-multiple-cursors"
-Bundle "editorconfig/editorconfig-vim"
-Bundle "stephpy/vim-php-cs-fixer"
-Bundle "pangloss/vim-javascript"
-Bundle "mxw/vim-jsx"
-"Bundle "isRuslan/vim-es6"
-Bundle "othree/yajs.vim"
-"Bundle "scrooloose/syntastic"
-Bundle "tpope/vim-eunuch"
-Bundle "evanmiller/nginx-vim-syntax"
-Bundle "zenorocha/dracula-theme"
-Bundle "vim-scripts/JavaScript-syntax"
-Bundle "digitaltoad/vim-pug"
 
 "设置NerdTree
 map <F3> :NERDTreeMirror<CR>
@@ -262,11 +270,17 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 set backspace=2
-let g:syntastic_javascript_checkers = ["eslint"]
+"let g:syntastic_javascript_checkers = ["eslint"]
 "let g:syntastic_javascript_checkers = [""]
 let g:syntastic_html_checkers = [""]
 let g:syntastic_php_checkers = [""]
 let g:syntastic_javascript_eslint_exec = "eslint"
+let g:syntastic_check_on_wq = 0
+
+let g:syntastic_javascript_checkers = ['fecs']
+let g:syntastic_javascript_fecs_args = "--rule"
+let g:syntastic_error_symbol = "✗"
+let g:syntastic_warning_symbol = "⚠"
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 0

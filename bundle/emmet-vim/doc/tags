@@ -2,6 +2,7 @@
 :EmmetInstall	emmet.txt	/*:EmmetInstall*
 <C-y>,	emmet.txt	/*<C-y>,*
 <C-y>/	emmet.txt	/*<C-y>\/*
+<C-y>;	emmet.txt	/*<C-y>;*
 <C-y>A	emmet.txt	/*<C-y>A*
 <C-y>D	emmet.txt	/*<C-y>D*
 <C-y>N	emmet.txt	/*<C-y>N*
@@ -13,6 +14,7 @@
 <C-y>k	emmet.txt	/*<C-y>k*
 <C-y>m	emmet.txt	/*<C-y>m*
 <C-y>n	emmet.txt	/*<C-y>n*
+<C-y>u	emmet.txt	/*<C-y>u*
 Emmet	emmet.txt	/*Emmet*
 emmet	emmet.txt	/*emmet*
 emmet-#	emmet.txt	/*emmet-#*
@@ -42,6 +44,7 @@ emmet-customize	emmet.txt	/*emmet-customize*
 emmet-customize-key-mappings	emmet.txt	/*emmet-customize-key-mappings*
 emmet-define-tags-behavior	emmet.txt	/*emmet-define-tags-behavior*
 emmet-expand-abbr	emmet.txt	/*emmet-expand-abbr*
+emmet-expand-word	emmet.txt	/*emmet-expand-word*
 emmet-filter	emmet.txt	/*emmet-filter*
 emmet-filter-c	emmet.txt	/*emmet-filter-c*
 emmet-filter-e	emmet.txt	/*emmet-filter-e*
@@ -73,6 +76,7 @@ emmet-todo	emmet.txt	/*emmet-todo*
 emmet-toggle-comment	emmet.txt	/*emmet-toggle-comment*
 emmet-tutorial	emmet.txt	/*emmet-tutorial*
 emmet-update-image-size	emmet.txt	/*emmet-update-image-size*
+emmet-update-tag	emmet.txt	/*emmet-update-tag*
 emmet-variables	emmet.txt	/*emmet-variables*
 emmet-wrap-with-abbreviation	emmet.txt	/*emmet-wrap-with-abbreviation*
 emmet-{}	emmet.txt	/*emmet-{}*
