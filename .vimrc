@@ -244,6 +244,8 @@ Plugin 'digitaltoad/vim-pug'
 Plugin 'vim-scripts/AnsiEsc.vim'
 Plugin 'hushicai/fecs.vim.git'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'mileszs/ack.vim'
+Plugin 'tyok/nerdtree-ack'
 
 call vundle#end()
 filetype indent plugin on
