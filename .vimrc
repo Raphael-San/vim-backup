@@ -235,7 +235,7 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 Plugin 'isRuslan/vim-es6'
 Plugin 'othree/yajs.vim'
-"Plugin 'scrooloose/syntastic'
+Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-eunuch'
 Plugin 'evanmiller/nginx-vim-syntax'
 Plugin 'zenorocha/dracula-theme'
@@ -246,6 +246,7 @@ Plugin 'hushicai/fecs.vim.git'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'mileszs/ack.vim'
 Plugin 'tyok/nerdtree-ack'
+Plugin 'airblade/vim-gitgutter'
 
 call vundle#end()
 filetype indent plugin on
@@ -272,11 +273,10 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 set backspace=2
-"let g:syntastic_javascript_checkers = ["eslint"]
-"let g:syntastic_javascript_checkers = [""]
 let g:syntastic_html_checkers = [""]
 let g:syntastic_php_checkers = [""]
-let g:syntastic_javascript_eslint_exec = "eslint"
+
+let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
 
 let g:syntastic_javascript_checkers = ['fecs']
@@ -284,6 +284,7 @@ let g:syntastic_javascript_fecs_args = "--rule"
 let g:syntastic_error_symbol = "✗"
 let g:syntastic_warning_symbol = "⚠"
 
-let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_always_populate_loc_list = 0
 let g:syntastic_auto_loc_list = 0
-let g:syntastic_check_on_open = 1
+
+nmap <F5> :SyntasticCheck<cr>
