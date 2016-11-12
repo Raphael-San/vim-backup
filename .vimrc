@@ -267,6 +267,15 @@ let g:javascript_enable_domhtmlcss = 1
 let g:jsx_ext_require = 0
 let g:multi_cursor_exit_from_insert_mode = 0
 
+"nerdcommenter
+
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
+" Use compact syntax for prettified multi-line comments
+let g:NERDDefaultAlign = 'left'
+" Set a language to use its alternate delimiters by default
+let g:NERDTrimTrailingWhitespace = 1
+
 "syntastic
 execute pathogen#infect()
 set statusline+=%#warningmsg#
